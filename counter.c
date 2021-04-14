@@ -23,7 +23,8 @@ int main()
 
   // request and read in the string from the user
   printf("Enter text for analysis: ");
-  while ( ((input = getchar()) != '\n') && (i < (BUFFER_SIZE - 1))) {
+  while ( ((input = getchar()) != '\n') && (i < (BUFFER_SIZE - 1)))
+  {
     buffer[i++] = input;
   }
   buffer[i] = '\0';
@@ -37,7 +38,8 @@ int main()
   // toupper() and then we check if it is in the ASCII range for A-Z (65-90)
   // to determine if we need to increment a count... if it is we increment
   // the right index using 65 as an 'offset'.
-  for (i = 0; i < strlen(buffer); i++) {
+  for (i = 0; i < strlen(buffer); i++) 
+  {
     curchar = toupper(buffer[i]);
     if (curchar >= 65 && curchar <= 90) count[curchar - 65]++;
     else other++;
